@@ -7,7 +7,7 @@ route:
 receivers:
   - name: 'default-receiver'
     email_configs:
-      - to: 'sanis.mrzan@gmail.com, rujan.maharjan@sbsolutionsnepal.com, simon.neupane@sbsolutionsnepal.com, sanish.maharjan@sbsolutionsnepal.com,>
+      - to: 'sanis.mrzan@gmail.com, rujan.maharjan@sbsolutionsnepal.com, simon.neupane@sbsolutionsnepal.com, sanish.maharjan@sbsolutionsnepal.com'
         from: 'sbsolutionstest@gmail.com'
         smarthost: 'smtp.gmail.com:587'
         auth_username: 'sbsolutionstest@gmail.com'
