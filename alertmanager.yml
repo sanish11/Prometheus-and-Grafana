@@ -1,0 +1,15 @@
+global:
+  resolve_timeout: 5m
+
+route:
+  receiver: 'default-receiver'
+
+receivers:
+  - name: 'default-receiver'
+    email_configs:
+      - to: 'sanis.mrzan@gmail.com, rujan.maharjan@sbsolutionsnepal.com, simon.neupane@sbsolutionsnepal.com, sanish.maharjan@sbsolutionsnepal.com,>
+        from: 'sbsolutionstest@gmail.com'
+        smarthost: 'smtp.gmail.com:587'
+        auth_username: 'sbsolutionstest@gmail.com'
+        auth_password: 'caqyiohlthhdpoke'
+

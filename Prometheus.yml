@@ -1,0 +1,33 @@
+# Global configuration
+global:
+  scrape_interval: 15s  # Default scrape interval
+  evaluation_interval: 15s  # Default evaluation interval for rules
+
+# Alertmanager configuration
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          - '103.187.8.39:9093'
+
+# Load rules from the specified files
+rule_files:
+   - "alert_rules.yml"
+  # - "second_rules.yml"
+
+# Scrape configurations
+scrape_configs:
+  # Scrape configuration for Prometheus itself
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  # Example of another scrape job, e.g., Node Exporter
+  - job_name: 'node_exporter'
+    static_configs:
+      - targets: ['localhost:9100']
+
+  # Adding new target for the IP 103.94.159.179:9182
+  - job_name: 'custom_exporter'
+    static_configs:
+      - targets: ['103.94.159.179:9182']
